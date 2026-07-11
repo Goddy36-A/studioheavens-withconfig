@@ -1,12 +1,12 @@
  <?php session_start(); ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Heavens | Multi-Service Hub</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/PROJECTS/style.css">
 </head>
 <body>
 
@@ -19,8 +19,8 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="services.html">Our Services</a>
-        <a href="debate.html">Debate Sponsorship</a>
+        <a href="/PROJECTS/services.html">Our Services</a>
+        <a href="/PROJECTS/debate.html">Debate Sponsorship</a>
         <a href="#join-us">Join Organization</a>
         <a href="#contact">Contact Us</a>
     </nav>
@@ -219,7 +219,7 @@
                     </tr>
                     <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 10px 0; font-weight: bold; color: #1877F2;">🔵 Facebook:</td>
-                        <td style="padding: 10px 0; text-align: right;"><a href="https://facebook.com/studioheavens" target="_blank" style="color: #333; text-decoration: none; font-weight: 600;">@studioheavens</a></td>
+                        <td style="padding: 10px 0; text-align: right;"><a href="https://facebook.com/studioheavens" target="_blank" style="color: #333; text-decoration: none; font-weight: 600;">Studio Heavens</a></td>
                     </tr>
                     <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 10px 0; font-weight: bold; color: #1DA1F2;">🐦 Twitter / X:</td>
