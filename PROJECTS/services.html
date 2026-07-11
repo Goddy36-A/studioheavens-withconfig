@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services & Rates | Studio Heavens</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-img-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .service-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .service-body h3 {
+            color: #1e3c72;
+            margin: 0 0 15px 0;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 8px;
+        }
+        .price-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .price-list td {
+            padding: 10px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .price-list td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        .back-btn {
+            display: inline-block;
+            background: #1e3c72;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: #2a5298;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <h1>Our Services & Operational Rates</h1>
+        <p>Explore our premium community hub, salon options, and technical solutions</p>
+    </header>
+
+    <div class="container" style="margin-top: 30px;">
+        <a href="index.php" class="back-btn">⬅ Back to Home</a>
+
+        <div class="services-grid">
+
+            <!-- ✂️ Card 1: Hair Cutting & Barbering -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <!-- Replace with your actual image path, e.g., images/barber.jpg -->
+                    <img src="images/haircut.jpeg" alt="Hair Cutting Section">
+                </div>
+                <div class="service-body">
+                    <h3>💇‍♂️ Hair Cutting (By Age)</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Precision haircuts and clean shaves matching age groups:</p>
+                    <table class="price-list">
+                        <tr><td>Kids (Under 12 Years)</td><td>UGX 3,000</td></tr>
+                        <tr><td>Students / Teen Youth</td><td>UGX 5,000</td></tr>
+                        <tr><td>Adults (Standard Grooming)</td><td>UGX 8,000</td></tr>
+                        <tr><td>VIP Treatment & Special Cuts</td><td>UGX 15,000</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 👑 Card 2: Hair Dressing & Styling -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <!-- Replace with your actual image path, e.g., images/hairdressing.jpg -->
+                    <img src="images/hairdressing.jpeg" alt="Hair Dressing Care">
+                </div>
+                <div class="service-body">
+                    <h3>👑 Hair Dressing & Care</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Complete texturing, weaving, treatments, and styling:</p>
+                    <table class="price-list">
+                        <tr><td>Hair Washing & Blow Dry</td><td>UGX 10,000</td></tr>
+                        <tr><td>Chemical Retouch & Relaxer</td><td>UGX 25,000</td></tr>
+                        <tr><td>Braiding & Lines (Standard)</td><td>UGX 30,000</td></tr>
+                        <tr><td>Premium Wig Fitting / Crochet</td><td>UGX 50,000</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ✨ Card 3: Spa, Face Scrub & Massage -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <!-- Replace with your actual image path, e.g., images/spa.jpg -->
+                    <img src="images/scrub.jpeg" alt="Massage and Skincare">
+                </div>
+                <div class="service-body">
+                    <h3>✨ Face Scrub & Massage</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Therapeutic wellness routines for refreshing care:</p>
+                    <table class="price-list">
+                        <tr><td>Deep Cleansing Face Scrub</td><td>UGX 15,000</td></tr>
+                        <tr><td>Facial Steam & Treatment Mask</td><td>UGX 25,000</td></tr>
+                        <tr><td>Aromatherapy Partial Massage</td><td>UGX 35,000</td></tr>
+                        <tr><td>Full Body Massage Session (60 Mins)</td><td>UGX 60,000</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 💻 Card 4: Computer & Tech Services -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <!-- Replace with your actual image path, e.g., images/computer.jpg -->
+                    <img src="images/computer.jpeg" alt="Digital Computer Station">
+                </div>
+                <div class="service-body">
+                    <h3>💻 Computer & Digital Services</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">High-speed secretarial solutions, printouts, and IT assistance:</p>
+                    <table class="price-list">
+                        <tr><td>Typing & Printing (Per Page)</td><td>UGX 500</td></tr>
+                        <tr><td>Custom Graphics (Flyers/Posters)</td><td>UGX 20,000</td></tr>
+                        <tr><td>Operating System Installation</td><td>UGX 30,000</td></tr>
+                        <tr><td>Computer Lessons / ICT Pack (Monthly)</td><td>UGX 100,000</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 🏢 Card 5: Rentals & Equipment -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <!-- Replace with your actual image path, e.g., images/rentals.jpg -->
+                    <img src="images/rentals.jpg" alt="Space and Gear Rentals">
+                </div>
+                <div class="service-body">
+                    <h3>🏢 Space & Asset Rentals</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Rent our premium hardware and event infrastructure assets:</p>
+                    <table class="price-list">
+                        <tr><td>Media Equipment / Camera (Daily)</td><td>UGX 80,000</td></tr>
+                        <tr><td>Disco Sounds / Full PA Setup (Daily)</td><td>UGX 300,000</td></tr>
+                        <tr><td>Main Studio Hall Hire Venue (Per Event)</td><td>UGX 500,000</td></tr>
+                    </table>
+                            <!-- 📱 Mobile Money Payment Notice for Services -->
+        <div class="services-payment-notice" style="margin-top: 40px; background: #fff9e6; border-left: 5px solid #ffd700; padding: 25px; border-radius: 6px;">
+            <h4 style="color: #1e3c72; margin: 0 0 10px 0; font-size: 1.2rem;">💳 Official Payment Instructions</h4>
+            <p style="color: #333; margin: 0 0 15px 0; font-size: 1rem;">All walk-in services, treatments, and rental bookings must be cleared through our official studio payment line(MUBANGIZI PETERSON):</p>
+            <div style="background: #fff; display: inline-block; padding: 10px 20px; border: 2px dashed #1e3c72; border-radius: 4px; font-weight: bold; color: #1e3c72; font-size: 1.1rem;">
+                Studio Mobile Line: +256 761 639 614/ +256 759 724 432
+            </div>
+            <p style="font-size: 0.85rem; color: #666; margin: 15px 0 0 0;">
+                <em>* Note: For space or equipment rentals, please ensure you complete your mobile money transaction and present your SMS receipt confirmation to our desk agent for schedule verification.</em>
+            </p>
+        </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Studio Heavens. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
