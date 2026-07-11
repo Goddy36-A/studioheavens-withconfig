@@ -1,38 +1,31 @@
-<?php
+<?php 
 /**
  * Studio Heavens - Main Entry Point
+ * Optimized for Render deployment
  */
 
-// Define base path
+// Define base path constants
 define('BASE_PATH', __DIR__);
+define('PROJECTS_PATH', BASE_PATH . '/PROJECTS');
 
-// Check if PROJECTS directory exists and load from there
-$projects_dir = BASE_PATH . '/PROJECTS';
+// Set proper error handling
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
 
-if (is_dir($projects_dir)) {
-    // Load index from PROJECTS folder if it exists
-    $projects_index = $projects_dir . '/index.php';
-    if (file_exists($projects_index)) {
-        include $projects_index;
-        exit;
-    }
-    
-    // List available projects
-    echo "<h1>Studio Heavens - Projects</h1>";
-    echo "<p>Welcome to Studio Heavens!</p>";
-    echo "<h2>Available Projects:</h2>";
-    echo "<ul>";
-    
-    $projects = array_diff(scandir($projects_dir), ['.', '..']);
-    foreach ($projects as $project) {
-        if (is_dir($projects_dir . '/' . $project)) {
-            echo "<li><a href='/PROJECTS/$project/'>$project</a></li>";
-        }
-    }
-    echo "</ul>";
+// Start session
+session_start();
+
+// Check if PROJECTS directory exists and serve from there
+if (is_dir(PROJECTS_PATH) && file_exists(PROJECTS_PATH . '/index.php')) {
+    // Change to PROJECTS directory for proper relative path resolution
+    chdir(PROJECTS_PATH);
+    include PROJECTS_PATH . '/index.php';
+    exit;
 } else {
-    // Default landing page
-    echo <<<HTML
+    // Default landing page if PROJECTS doesn't exist
+    http_response_code(200);
+    echo <<<'HTML'
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -66,25 +59,16 @@ if (is_dir($projects_dir)) {
                 color: #666;
                 font-size: 16px;
             }
-            .info {
-                background: #f0f0f0;
-                padding: 20px;
-                border-radius: 5px;
-                margin-top: 20px;
-                text-align: left;
-            }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>🎨 Studio Heavens</h1>
             <p>Welcome to Studio Heavens - Social Services & Employment Opportunities Platform</p>
-            <div class="info">
-                <p><strong>About:</strong> This organization is holding many social services with employment opportunities to the public. It also supports public speaking of students in school for a better generation.</p>
-            </div>
         </div>
     </body>
     </html>
     HTML;
+    exit;
 }
 ?>
