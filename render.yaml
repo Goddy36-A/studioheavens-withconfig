@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: studioheavens
+    runtime: php
+    runtimeVersion: 8.2
+    buildCommand: |
+      composer install --optimize-autoloader --no-dev || true
+      npm install || true
+      npm run build || true
+    startCommand: apache2ctl start
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: PHP_VERSION
+        value: "8.2"
+    routes:
+      - path: /
+        destination: /PROJECTS/var/www/html/
+    dockerfile: ./Dockerfile
+    dockerfilePath: ./
