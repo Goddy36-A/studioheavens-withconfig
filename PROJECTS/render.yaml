@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: studio-heavens-web
+    env: docker
+    plan: free
+    dockerrepo: php:8.2-apache
+    buildCommand: cp -r . /var/www/html/
